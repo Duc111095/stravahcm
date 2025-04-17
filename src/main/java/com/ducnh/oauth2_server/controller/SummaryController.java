@@ -39,7 +39,11 @@ public class SummaryController {
         String formattedDate = currentDate.format(DateTimeFormatter.ofPattern("dd/MM"));
         model.addAttribute("currentDate", formattedDate);
 		model.addAttribute("events", events);
-		getEventSummary(events.iterator().next().getId());
+		try {
+			getEventSummary(events.iterator().next().getId());
+		} catch (RuntimeException e) {
+			model.addAttribute("message", "Chưa có sụ kiện nào được tạo");
+		}
 		return "summary";
 	}
 	
