@@ -87,7 +87,7 @@
 
             console.log("Accepting athlete with ID:", athleteId, "for event ID:", eventId);
 
-            fetch("/runner/register/accept", {
+            fetch("/runnerhcm/register/accept", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -111,7 +111,7 @@
 
             console.log("Deleting athlete with ID:", athleteId, "for event ID:", eventId);
 
-            fetch("/runner/register/delete", {
+            fetch("/runnerhcm/register/delete", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
