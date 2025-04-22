@@ -10,6 +10,9 @@ public class SummaryEventDTO {
     private Double totalCurrentDistance;
     private int stt;
     private Double totalDistanceEx;
+    private Double distanceAll;
+    private int activeDay;
+    private int exPoint;
 
     public SummaryEventDTO() {}
 
@@ -84,5 +87,29 @@ public class SummaryEventDTO {
 
     public int getSTT() {
         return this.stt;
+    }
+
+    public void setDistanceAll(Double distanceAll) {
+        this.distanceAll = distanceAll;
+    }
+
+    public String getDistanceAll() {
+        return String.format("%.1f", distanceAll);
+    }
+
+    public int getActiveDay() {
+        return this.activeDay;
+    }
+
+    public void setActiveDay(int activeDay) {
+        this.activeDay = activeDay;
+    }
+
+    public int getExPoint() {
+        return this.exPoint;
+    }
+
+    public void setExPoint(int exPoint) {
+        this.exPoint = exPoint;
     }
 }

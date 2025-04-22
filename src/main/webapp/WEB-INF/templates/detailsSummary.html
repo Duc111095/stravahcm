@@ -211,6 +211,10 @@
                 margin: 20px auto;
                 border-collapse: collapse;
             }
+
+            .middle-grid {
+                text-align: center;            
+            }
         }
     </style>
 </head>
@@ -233,14 +237,14 @@
                 <th>Tên VĐV</th>
                 <th th:text="${currentDate} + '(Km)'"></th>
                 <th>Tổng(Km)</th>
-                <th>Quy đổi</th>
+                <th>Điểm quy đổi</th>
             </tr>
             <tr th:each="ac : ${detailsSummary}">
-                <td th:text="${ac.getStt()}"></td>
+                <td class="middle-grid"  th:text="${ac.getStt()}"></td>
                 <td th:text="${ac.getAthleteName()}"></td>
-                <td id="distance" th:text="${ac.formatTotalCurrentDistance()}"></td>
-                <td id="distance" th:text="${ac.formatTotalDistance()}"></td>
-                <td id="distance" th:text="${ac.formatTotalDistanceEx()}"></td>
+                <td id="distance" class="middle-grid" th:text="${ac.formatTotalCurrentDistance()}"></td>
+                <td id="distance" class="middle-grid" th:text="${ac.formatTotalDistance()}"></td>
+                <td id="distance" class="middle-grid" th:text="${ac.getExPoint()}"></td>
                 <td><a th:href="@{/activities?(athleteId=${ac.getAthleteId()})}" class="btn btn-primary">Chi tiết</a></td>
             </tr>
         </table>

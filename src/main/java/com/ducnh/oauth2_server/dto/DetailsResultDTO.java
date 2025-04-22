@@ -12,6 +12,9 @@ public class DetailsResultDTO {
     private Double totalCurrentDistance;
     private int stt;
     private Double totalDistanceEx;
+    private Double distanceAll;
+    private int activeDay;
+    private int exPoint;
 
     public String formatTotalDistance() {
         return String.format("%.1f", this.totalDistance / 1000);
@@ -23,6 +26,10 @@ public class DetailsResultDTO {
 
     public String formatTotalDistanceEx() {
         return String.format("%.1f", this.totalDistanceEx / 1000);
+    }
+
+    public String formatDistanceAll() {
+        return String.format("%.1f", this.distanceAll / 1000);
     }
 
 }

@@ -65,6 +65,9 @@ public class SummaryController {
 			double totalDistance = ((Number) result[3]).doubleValue();
 			double totalCurrentDistance = ((Number) result[4]).doubleValue();
 			int stt = ((Number) result[5]).intValue();
+			double distanceAll = ((Number) result[7]).doubleValue();
+			int activeDay = ((Number) result[8]).intValue();
+			int exPoint = ((Number) result[9]).intValue();
 			DetailsResultDTO detailResult = new DetailsResultDTO();
 			
 			detailResult.setAthleteId(athleteId);
@@ -76,6 +79,9 @@ public class SummaryController {
 			detailResult.setTeamName(teamName);
 			double totalDistanceEx = totalDistance * event.getExRate();
 			detailResult.setTotalDistanceEx(totalDistanceEx);
+			detailResult.setDistanceAll(distanceAll);
+			detailResult.setActiveDay(activeDay);
+			detailResult.setExPoint(exPoint);
 			detailsSummary.add(detailResult);
 		}
 		ZoneId zoneId = ZoneId.of("Asia/Ho_Chi_Minh");
@@ -115,6 +121,9 @@ public class SummaryController {
 			double totalDistance = ((Number) result[2]).doubleValue();
 			double totalCurrentDistance = ((Number) result[3]).doubleValue();
 			int stt = ((Number) result[4]).intValue();
+			double distanceAll = ((Number) result[7]).doubleValue();
+			int activeDay = ((Number) result[8]).intValue();
+			int exPoint = ((Number) result[9]).intValue();
 			double totalDistanceEx = totalDistance * event.getExRate();
 
 			SummaryEventDTO summaryEvent = new SummaryEventDTO();
@@ -126,6 +135,9 @@ public class SummaryController {
 			summaryEvent.setTotalCurrentDistance(totalCurrentDistance);
 			summaryEvent.setSTT(stt);
 			summaryEvent.setTotalDistanceEx(totalDistanceEx);
+			summaryEvent.setDistanceAll(distanceAll);
+			summaryEvent.setActiveDay(activeDay);
+			summaryEvent.setExPoint(exPoint);
 			summaryEvents.add(summaryEvent);
 		}
 		return summaryEvents;

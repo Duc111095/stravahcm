@@ -256,7 +256,7 @@
                     <th>SL thành viên</th>
                     <th th:text="${currentDate} + '(Km)'"></th>
                     <th>Tổng(Km)</th>
-                    <th>Quy đổi</th>
+                    <th>Điểm quy đổi</th>
                 </tr>
                 <tbody id="event-summary-body">          
                 </tbody>
@@ -337,7 +337,7 @@
                         <td class="middle-grid">${summary.teamCount}</td>
                         <td class="middle-grid">${summary.totalCurrentDistance}</td>
                         <td class="middle-grid">${summary.totalDistance}</td>
-                        <td class="middle-grid">${summary.totalDistanceEx}</td>
+                        <td class="middle-grid">${summary.exPoint}</td>
                         <td><a href="/runnerhcm/summary/team?teamId=${summary.teamId}&eventId=${summary.eventId}" class="btn btn-primary">Chi tiết</a></td>
                     `;
                     eventSummaryBody.appendChild(row);
