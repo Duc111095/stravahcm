@@ -171,30 +171,51 @@
             }
             
             .main-content {
+                overflow-x: hidden;
                 margin-left: 0 !important;
-                width: 100%;
-                padding: 15px;
+                width: 100% !important;
                 padding-top: 60px; /* Add padding at top for mobile view */
+                box-sizing: border-box;
             }
             
             .container {
-                padding: 15px;
-                margin: 20px auto;
+                width: 100%;
+                max-width: 100%;
+                padding: 0;
+                margin: 0 auto;
+                box-sizing: border-box;
             }
             
-            table {
+            .registration-form {
+                width: 100%;
+                max-width: 100%;
+                margin: 0 auto;
+                padding: 15px;
+                box-sizing: border-box;
+            }
+
+            table.summary {
+                width: 100%;
+                max-width: 100%;
                 display: block;
                 overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
             }
-            
-            .footer-left, .footer-right {
-                position: static;
-                margin: 10px 0;
+
+            .form-control {
+                width: 100%;
+                box-sizing: border-box;
+                margin: 15px auto;
+            }
+
+            .footer-right {
+                display: none;
+                margin: auto;
                 text-align: center;
             }
             
             .footer-left {
-                display: flex;
+                display: none;
                 justify-content: center;
             }
             
@@ -206,12 +227,6 @@
 
             .middle-grid {
                 text-align: center;
-            }
-
-            .summary {
-                width: 100%;
-                margin: 20px auto;
-                border-collapse: collapse;
             }
         }
     </style>
@@ -254,8 +269,8 @@
                     <th>Hạng</th>
                     <th>Tên nhóm</th>
                     <th>SL thành viên</th>
-                    <th th:text="${currentDate} + '(Km)'"></th>
-                    <th>Tổng(Km)</th>
+                    <th th:text="${currentDate} + ' (Km)'"></th>
+                    <th>Tổng (Km)</th>
                     <th>Điểm quy đổi</th>
                 </tr>
                 <tbody id="event-summary-body">          
