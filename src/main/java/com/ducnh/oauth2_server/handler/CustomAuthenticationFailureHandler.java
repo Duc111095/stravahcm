@@ -25,6 +25,6 @@ public class CustomAuthenticationFailureHandler implements AuthenticationFailure
             errorMessage = "";
         }
         logger.error(errorMessage, exception);
-        response.sendRedirect("/runner/cuserror?error=true");            
+        response.sendRedirect("/runnerhcm/cuserror?error=true");            
     } 
 }
