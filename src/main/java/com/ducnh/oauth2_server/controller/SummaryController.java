@@ -84,6 +84,7 @@ public class SummaryController {
 			detailResult.setExPoint(exPoint);
 			detailsSummary.add(detailResult);
 		}
+		
 		ZoneId zoneId = ZoneId.of("Asia/Ho_Chi_Minh");
 		LocalDateTime currentDate = LocalDateTime.now(zoneId);
 		String formattedDate = currentDate.format(DateTimeFormatter.ofPattern("dd/MM"));

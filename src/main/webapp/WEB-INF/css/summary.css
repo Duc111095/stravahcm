@@ -52,6 +52,7 @@ body {
     box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.1);
     flex-grow: 1;
 }
+
 h1, th {
     background: linear-gradient(90deg, #ff0000, #ff8c00);
     -webkit-background-clip: text;
@@ -149,6 +150,7 @@ tr:nth-child(even) {
 .form-actions button {
     flex: 1;
 }
+
 .footer-left {
     position: fixed;
     bottom: 10px;
@@ -158,19 +160,101 @@ tr:nth-child(even) {
     display: flex;
     align-items: center;
 }
+
 .footer-right {
     position: fixed;
     bottom: 10px;
     right: 10px;
     font-size: 14px;
 }
+
+.main-content #teamIdFilter {
+    margin: 30px auto;
+    width: 300px;
+    border-radius: 5px;
+    border: 1px solid #e9d4d4;
+    align-items: flex-end;
+}
+
 .strava-logo {
     height: 20px;
     margin-left: 5px;
 }
-/* Responsive additions to style.css */
-* {
-    box-sizing: border-box;
+
+#distance {
+    text-align: center;
+}
+.sortable {
+    cursor: pointer;
+}
+.sortable:hover {
+    text-decoration: underline;
+} 
+
+.registration-form {
+    background-color: #2A2A2A;
+    border-radius: 8px;
+    padding: 25px;
+    margin: 25px auto;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    text-align: center;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #E0E0E0;
+    text-align: center;
+}     
+
+.form-control {
+    width: 100%;
+    padding: 10px 15px;
+    background-color: #524a08;
+    border: 1px solid #4A4A4A;
+    border-radius: 5px;
+    color: #E0E0E0;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #ff8c00;
+    box-shadow: 0 0 0 2px rgba(255, 140, 0, 0.25);
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.btn-primary {
+    background: linear-gradient(90deg, #ff0000, #ff8c00);
+    color: white;
+    border: none;
+}
+
+.btn-primary:hover {
+    box-shadow: 0px 0px 10px rgba(255, 140, 0, 0.5);
+    transform: translateY(-2px);
+}
+
+.btn-danger {
+    background: linear-gradient(90deg, #dc3545, #ff4d5a);
+    color: white;
+}
+
+.btn-danger:hover {
+    box-shadow: 0px 0px 10px rgba(220, 53, 69, 0.5);
+    transform: translateY(-2px);
 }
 
 /* Toggle button for sidebar */
@@ -227,138 +311,10 @@ tr:nth-child(even) {
 .main-content.full-width {
     margin-left: 0;
 }
-
-/* Lap details styling */
-.lap-details-container {
-    display: none;
-    background-color: #2A2A2A;
-    color: #E0E0E0;
-    padding: 15px;
-    border-radius: 5px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    text-align: left;
-    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
-}
-
-.lap-details-container.show {
-    display: block;
-}
-
-/* Action buttons styling */
-.action-button {
-    background: linear-gradient(90deg, #ff0000, #ff8c00);
-    color: white;
-    border: none;
-    border-radius: 3px;
-    padding: 5px 10px;
-    margin-right: 5px;
-    cursor: pointer;
-    font-size: 12px;
-    transition: all 0.2s ease-in-out;
-}
-
-.action-button:hover {
-    box-shadow: 0px 0px 8px rgba(255, 140, 0, 0.7);
-}
-
-.action-button i {
-    margin-right: 5px;
-}
-
-/* Update button styling */
-.update-button button {
-    background: linear-gradient(90deg, #ff0000, #ff8c00);
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-}
-
-.update-button button:hover {
-    box-shadow: 0px 0px 10px rgba(255, 140, 0, 0.5);
-}
-
-/* Map container styling */
-#activity-map {
-    border-radius: 5px;
-    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.1);
-}
-
-/* Alert styling adjustment */
-.alert {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    padding: 15px;
-    border-radius: 5px;
-    z-index: 1000;
-}
-
-.alert-success {
-    background-color: rgba(40, 167, 69, 0.8);
-    color: white;
-}
-
-.alert-warning {
-    background-color: rgba(255, 193, 7, 0.8);
-    color: white;
-}
-
-.alert-danger {
-    background-color: rgba(220, 53, 69, 0.8);
-    color: white;
-}
-
-/* Button styling */
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: 500;
-    transition: all 0.3s ease;
-    border: none;
-}
-
-.btn-primary {
-    background: linear-gradient(90deg, #ff0000, #ff8c00);
-    color: white;
-    border: none;
-}
-
-.btn-primary:hover {
-    box-shadow: 0px 0px 10px rgba(255, 140, 0, 0.5);
-    transform: translateY(-2px);
-}
-
-.btn-danger {
-    background: linear-gradient(90deg, #dc3545, #ff4d5a);
-    color: white;
-}
-
-.btn-danger:hover {
-    box-shadow: 0px 0px 10px rgba(220, 53, 69, 0.5);
-    transform: translateY(-2px);
-}
-
-.middle-grid {
-    text-align: center;
-}
-
 /* Responsive media queries */
 @media screen and (max-width: 768px) {
     body {
         font-size: 15px;
-        flex-direction: column;
-        width: 100% !important;
-    }
-
-    .container {
-        width: 100%;
     }
     
     .sidebar {
@@ -373,7 +329,18 @@ tr:nth-child(even) {
         max-height: 100vh;
         background-color: rgba(0, 0, 0, 0.95); /* Darker background for mobile menu */
     }
-    
+
+    .btn {
+        display: inline-block;
+        padding: 10px 10px;
+        border-radius: 3px;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        border: none;
+    }
+
     .sidebar.show {
         display: block;
     }
@@ -382,24 +349,48 @@ tr:nth-child(even) {
         text-align: center;
         padding: 15px 20px; /* Center links on mobile */
     }
+
+    #button-form {
+        padding-top: 15px;
+    }
     
     .main-content {
-        margin-left: 0 !important;
-        width: 100%;
-        padding: 15px;
+        overflow-x: hidden;
+        margin: 15px;
+        padding: 15px auto;
+        width: 100% !important;
         padding-top: 60px; /* Add padding at top for mobile view */
     }
     
     .container {
-        padding: 15px;
-        margin: 20px auto;
+        width: 100%;
+        padding: 15px auto;
+        margin: 15px auto;
+        box-sizing: border-box;
     }
     
-    table {
+    .registration-form {
+        width: 100%;
+        max-width: 100%;
+        padding: 25px;
+        margin: 25px auto;
+        box-sizing: border-box;
+    }
+
+    table.summary {
+        width: 100%;
+        max-width: 100%;
         display: block;
         overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
     }
-    
+
+    .form-control {
+        width: 100%;
+        box-sizing: border-box;
+        margin: 15px auto;
+    }
+
     .footer-right {
         position: static;
         margin: 10px 0;
@@ -414,5 +405,9 @@ tr:nth-child(even) {
     .toggle-menu {
         left: 10px;
         top: 10px;
+    }
+
+    .middle-grid {
+        text-align: center;
     }
 }
