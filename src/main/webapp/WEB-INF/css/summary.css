@@ -311,6 +311,11 @@ tr:nth-child(even) {
 .main-content.full-width {
     margin-left: 0;
 }
+
+.middle-grid {
+    text-align: center;
+}
+
 /* Responsive media queries */
 @media screen and (max-width: 768px) {
     body {
