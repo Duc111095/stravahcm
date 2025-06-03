@@ -6,3 +6,5 @@ build/
 *.iml
 .mvn/
 application.properties
+*.log
+app-logs/

@@ -337,7 +337,7 @@ public class AthleteUser {
 		return user;
 	}
 
-    public static AthleteUser createFromJsonMapStringObject(ResponseEntity<Map<String, Object>> response) {
+	public static AthleteUser createFromJsonMapStringObject(ResponseEntity<Map<String, Object>> response) {
 		Map<String, Object> bodyMap = response.getBody();
 		AthleteUser user = new AthleteUser();
 		user.setId(Long.parseLong(bodyMap.get("id").toString()));
